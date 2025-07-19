@@ -22,6 +22,11 @@ export default {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Keep it above other content */
 }
 
 .navbar a {

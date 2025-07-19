@@ -70,12 +70,85 @@
 
     <q-btn class="q-ml-md" color="white" text-color="black" label="View more examples" />
   </div>
+
+
+  <div class="section_2-container">
+    <div class="section-content">
+      <p class="q-m-b-none title">Need inspiration?</p>
+      <p class="description">See how the creatives below customized their Portfolio themes.</p>
+
+      <div class="section-tabs">
+
+        <q-btn
+          rounded
+          color="white"
+          text-color="black"
+          size="md"
+          label="All fields"
+          class="q-mr-md"
+          @click="openTab('allfields')"
+        />
+
+        <q-btn
+          rounded
+          color="white"
+          text-color="black"
+          size="md"
+          label="Photograpghy"
+          class="q-mr-md"
+          @click="openTab('photograpghy')"
+        />
+
+        <q-btn
+          rounded
+          color="white"
+          text-color="black"
+          size="md"
+          label="Illustrations"
+          class="q-mr-md"
+          @click="openTab('illustrations')"
+        />
+        </div>
+        <div>
+          <AllFields v-if="allfields"/>
+          <Photograpghy v-if="photograpghy" />
+          <Illustrations v-if="illustrations" />
+        </div>
+    </div>
+
+  </div>
+
 </template>
 
-<script>
-export default {
-  name: 'HomePage'
-}
+<script setup>
+import { ref } from 'vue';
+import AllFields from './../components/AllFields.vue';
+import Photograpghy from './../components/Photograpghy.vue';
+import Illustrations from './../components/illustrations.vue';
+
+
+const allfields= ref(true);
+const photograpghy = ref(false);
+const illustrations = ref(false);
+
+
+const openTab = (tab) => {
+  if(tab == 'allfields'){
+    allfields.value = true;
+    photograpghy.value = false;
+    illustrations.value = false; 
+  } else if(tab == 'photograpghy'){
+    allfields.value = false;
+    photograpghy.value = true;
+    illustrations.value = false;
+  } else if(tab == 'illustrations'){
+    allfields.value = false;
+    photograpghy.value = false;
+    illustrations.value = true;  
+  }
+};
+
+
 </script>
 
 <style scoped>
@@ -156,5 +229,19 @@ h2 {
   max-width: 567px;
   margin-bottom: 1rem;
 }
+
+.section_2-container{
+  background-color:  #ffffff;
+}
+.section-content .title{
+  font-size: 56px;
+  font-weight: 400; 
+  margin: auto;
+}
+
+.section-content .description{
+  font-size: 18px;
+}
+
 </style>
   
