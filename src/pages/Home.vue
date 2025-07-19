@@ -2,14 +2,15 @@
   <div class="home-page">
     <h1>Hi, I'm Ajay Maurya</h1>
     <p>Welcome to my portfolio website!</p>
-    
+
+    <div class="home-page-image">
+      <h2>What do you want to create</h2>
+      <p class="home-page-image-text">Whether you want to showcase your work in a full portfolio website, or
+        create a single-page website, we've got you covered.</p>
+    </div>
   </div>
 
-  <div class="home-page-image">
-    <h2>What do you want to create</h2>
-    <p class="home-page-image-text">Whether you want to showcase your work in a full portfolio website, or
-      create a single-page website, we've got you covered.</p>
-  </div>
+  
 
 
   <div class="q-pa-md row items-start q-gutter-md my-card-container">
@@ -153,13 +154,30 @@ const openTab = (tab) => {
 
 <style scoped>
 .home-page {
-  padding: 2rem;
+  padding: 6rem 2rem 2rem; /* Add extra padding at the top */
   text-align: center;
+  color: white;
+ background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #ff9a9e, #84fab0);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  border-radius: 8px; /* optional for rounded effect */
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-h1 {
-  margin-bottom: 1rem;
+h1, p {
+  margin: 0 0 10px;
 }
+
 h2 {
   font-weight: 100px;
 }
