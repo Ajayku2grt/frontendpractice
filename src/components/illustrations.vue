@@ -1,7 +1,7 @@
 <template>
     <div class="q-pa-md example-row-equal-width">
         <div class="row q-gutter-md q-mb-md card-details">
-            <q-card class="col">
+            <q-card class="col card-gradient-1">
                 <img src="https://cdn.quasar.dev/img/mountains.jpg" 
                     alt="Mountain" />
                     <p class="card-title">Majestic Mountain Escape</p>
@@ -9,14 +9,14 @@
 
             </q-card>
 
-            <q-card class="col">
+            <q-card class="col card-gradient-2">
                 <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" 
                     alt="Mountain" />
                     <p class="card-title">Nature’s Canvas</p>
-<p>A breathtaking blend of nature’s colors and textures that inspire peace.</p>
+                    <p>A breathtaking blend of nature’s colors and textures that inspire peace.</p>
             </q-card>
 
-            <q-card class="col">
+            <q-card class="col card-gradient-3">
                 <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6" 
                     alt="Mountain" />
                     <p class="card-title">Alpine Adventure</p>
@@ -68,6 +68,27 @@
     height: 269px; /* fixed height */
     object-fit: cover; /* crops image but keeps aspect ratio */
     border-radius: 5px;
+}
+
+.card-gradient-1{
+    background: linear-gradient(-45deg, #34ebc0, #34ebc0, #ffdde1, #fd9a9e, #ebc334);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    border-radius: 8px;
+}
+
+.card-gradient-2{
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #ff9a9e, #84fab0);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  border-radius: 8px; 
+}
+
+.card-gradient-3{
+  background: linear-gradient(-45deg, #34cdeb, #c2e9fb, #ffdde1, #3462eb, #84fab0);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  border-radius: 8px; 
 }
 
 </style>

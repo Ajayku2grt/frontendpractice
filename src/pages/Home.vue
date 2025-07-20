@@ -157,7 +157,7 @@ const openTab = (tab) => {
   padding: 6rem 2rem 2rem; /* Add extra padding at the top */
   text-align: center;
   color: white;
- background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #ff9a9e, #84fab0);
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #ffdde1, #ff9a9e, #84fab0);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   border-radius: 8px; /* optional for rounded effect */

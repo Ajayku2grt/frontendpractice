@@ -20,8 +20,7 @@ export default {
   background-color: #1b9aa1;
   color: white;
   text-align: center;
-  padding: 15px 0;
-  bottom: 0;
+  padding: 10px 0;
   width: 100%;
 }
 </style>

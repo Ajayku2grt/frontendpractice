@@ -1,7 +1,10 @@
 <template>
   <div class="contact-page">
-    <h1>Contact Me</h1>
     <div class="contact-content">
+      <img src="@/assets/IMG_20190917_184726_467.jpg"
+           alt="Contact Image" class="contact-image" />
+
+
       <p>Get in touch with me through any of these channels:</p>
       <div class="contact-info">
         <p><strong>Email:</strong> your.email@example.com</p>
@@ -19,6 +22,9 @@ export default {
 </script>
 
 <style scoped>
+body {
+  padding: 6rem 2rem 2rem;
+}
 .contact-page {
   padding: 2rem;
 }
@@ -35,4 +41,9 @@ export default {
   border-radius: 8px;
   background-color: #f5f5f5;
 }
+
+.contact-image {
+  border-radius : 8px
+}
+
 </style>

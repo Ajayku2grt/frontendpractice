@@ -1,6 +1,8 @@
 <template>
   <MainNavbar />
-  <router-view />
+   <main class="main-content">
+    <router-view />
+  </main>
   <MainFooter/>
 </template>
 
@@ -15,6 +17,10 @@ export default {
 </script>
 
 <style>
+.main-content {
+  padding-top: 60px;
+  flex: 1;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
